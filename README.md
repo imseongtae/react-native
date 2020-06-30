@@ -1,6 +1,10 @@
 # React Native with Smoothie
 
 React Native 를 학습한 내용을 정리합니다. 
+React Native를 활용해 만든 Counter app입니다.
+
+![image](https://user-images.githubusercontent.com/60806840/86162068-325a3200-bb49-11ea-91ff-1ec745c8c005.png)
+
 
 ## tsconfig.json 파일에 내용 추가
 
