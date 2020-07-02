@@ -11,6 +11,14 @@ Context API와 AsyncStorage를 활용한 ToDo List App입니다.
 TextInput 입력창이 화면 밑으로 내려가서 보이지 않는 문제가 생김  
 그래서 컴포넌트의 bottom 값을 100px를 줌..! 보이지 않는 문제는 다소 나아졌지만..! 올바른 해결은 아니라고 생각됨
 
+### 문제의 원인 이해
+- 시뮬레이터에서 가상 키보드를 사용하기 위해 아래 단축키를 입력해야 한다.
+- margin이나 padding을 주어도.. TextInput 창을 가리는 문제는 해결할 수 없었음
+
+```
+Shift + Cmd + K
+```
+
 ```js
 const Container = Styled.KeyboardAvoidingView`
   position: absolute;
@@ -26,6 +34,8 @@ const Container = Styled.KeyboardAvoidingView`
 텍스트를 입력할 때마다 
 글씨가 커졌다가 작아지는 축소확대 문제가 발생하는데 
 왜 생기는 것인지.. 모르겠다..!
+
+- 한글을 쓰거나, 문자에 한글이 섞여 있으면 축소확대 문제가 발생함...
 
 ## npm setting
 
