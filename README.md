@@ -5,61 +5,45 @@ React Native 를 학습한 내용을 정리합니다.
 ## ToDo App
 Context API와 AsyncStorage를 활용한 ToDo List App입니다.
 
+![image](https://user-images.githubusercontent.com/60806840/86366019-428f2000-bcb5-11ea-9a58-a2033e414200.png)
 
+### 문제.1
+TextInput 입력창이 화면 밑으로 내려가서 보이지 않는 문제가 생김  
+그래서 컴포넌트의 bottom 값을 100px를 줌..! 보이지 않는 문제는 다소 나아졌지만..! 올바른 해결은 아니라고 생각됨
+
+```js
+const Container = Styled.KeyboardAvoidingView`
+  position: absolute;
+  top: 0;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+`;
+```
+
+### 문제.2
+텍스트를 입력할 때마다 
+글씨가 커졌다가 작아지는 축소확대 문제가 발생하는데 
+왜 생기는 것인지.. 모르겠다..!
 
 ## npm setting
 
 ```bash
-npm i --save styled-components
-npm i --save-dev typescript @types/react @types/react-native @types/styled-components babel-plugin-root-import
+npm i --save @react-native-community/async-storage
 ```
 
-## tsconfig.json 파일에 내용 추가
+### package 버전으로 인한 설정
 
-```json
-{
-  "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "jsx": "react",
-    "lib": ["es6", "es2017"],
-    "moduleResolution": "node",
-    "noEmit": true,
-    "strict": true,
-    "target": "esnext",
-    "baseUrl": "./src",
-    "paths": {
-      "~/*": ["*"]
-    },
-  },
-  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
-}
+```
+npm audit --fix
 ```
 
-## babel.config.js
-babel.config.js 수정
+### AsyncStorage를 사용할 준비
 
-```js
-module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
-  plugins: [
-    [
-      'babel-plugin-root-import',
-      {
-        rootPathPrefix: '~',
-        rootPathSuffix: 'src',
-      },
-    ],
-  ],
-};
+```cd
+cd ios
+pod install
 ```
 
-
-## 절대 경로로 수정
-
-```js
-import App from './App';
-import App from '~/App';
-```
+## Context
