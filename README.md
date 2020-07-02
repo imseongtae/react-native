@@ -2,14 +2,17 @@
 
 React Native 를 학습한 내용을 정리합니다. 
 
+## ToDo App
+Context API와 AsyncStorage를 활용한 ToDo List App입니다.
+
+
+
 ## npm setting
 
 ```bash
 npm i --save styled-components
 npm i --save-dev typescript @types/react @types/react-native @types/styled-components babel-plugin-root-import
 ```
-
-
 
 ## tsconfig.json 파일에 내용 추가
 
