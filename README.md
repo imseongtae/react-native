@@ -5,6 +5,7 @@ branch에 나누어 정리합니다.
 
 ## Table of Contents
 
-0. init Project
-1. Set react native development environment
-2. Counter App
+00. init Project
+01. Set react native development environment
+02. Counter App
+03. Todo App
