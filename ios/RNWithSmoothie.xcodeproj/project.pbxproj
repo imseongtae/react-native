@@ -18,6 +18,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* RNWithSmoothieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNWithSmoothieTests.m */; };
 		3A38DE6BF5B4527FFEB96F91 /* libPods-RNWithSmoothie-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B8B74605B7A533F95354A1 /* libPods-RNWithSmoothie-tvOSTests.a */; };
 		5AD4EA9F2592128CDD024BD1 /* libPods-RNWithSmoothie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F9E266A60C03A1416AAF69 /* libPods-RNWithSmoothie.a */; };
+		876DAD2C24BECD9D00718D90 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876DAD2B24BECD9D00718D90 /* File.swift */; };
 		A2E9E5F020763CFB2188A1AF /* libPods-RNWithSmoothie-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82FF7F230BB3DF15BEFE8E85 /* libPods-RNWithSmoothie-tvOS.a */; };
 		E52ED808404A9F09F2A01A58 /* libPods-RNWithSmoothie-RNWithSmoothieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0D943D1052F423DB6A0A6D /* libPods-RNWithSmoothie-RNWithSmoothieTests.a */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,8 @@
 		3C0D943D1052F423DB6A0A6D /* libPods-RNWithSmoothie-RNWithSmoothieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNWithSmoothie-RNWithSmoothieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDE2F2A2C459ED6547DE600 /* Pods-RNWithSmoothie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNWithSmoothie.release.xcconfig"; path = "Target Support Files/Pods-RNWithSmoothie/Pods-RNWithSmoothie.release.xcconfig"; sourceTree = "<group>"; };
 		82FF7F230BB3DF15BEFE8E85 /* libPods-RNWithSmoothie-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNWithSmoothie-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		876DAD2A24BECD9D00718D90 /* RNWithSmoothie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNWithSmoothie-Bridging-Header.h"; sourceTree = "<group>"; };
+		876DAD2B24BECD9D00718D90 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8EE4E76653508EBE7B1C4399 /* Pods-RNWithSmoothie-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNWithSmoothie-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RNWithSmoothie-tvOSTests/Pods-RNWithSmoothie-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		94F9E266A60C03A1416AAF69 /* libPods-RNWithSmoothie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNWithSmoothie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB7470B652FA8C8FFE3BBBEC /* Pods-RNWithSmoothie-RNWithSmoothieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNWithSmoothie-RNWithSmoothieTests.release.xcconfig"; path = "Target Support Files/Pods-RNWithSmoothie-RNWithSmoothieTests/Pods-RNWithSmoothie-RNWithSmoothieTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				876DAD2B24BECD9D00718D90 /* File.swift */,
+				876DAD2A24BECD9D00718D90 /* RNWithSmoothie-Bridging-Header.h */,
 			);
 			name = RNWithSmoothie;
 			sourceTree = "<group>";
@@ -194,7 +199,6 @@
 				FED654BC2A1C5E0BC02F79E7 /* Pods-RNWithSmoothie-tvOSTests.debug.xcconfig */,
 				8EE4E76653508EBE7B1C4399 /* Pods-RNWithSmoothie-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,7 +296,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1150;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -531,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				876DAD2C24BECD9D00718D90 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0CD08C0576F492CDABA10F0D /* Pods-RNWithSmoothie-RNWithSmoothieTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -607,6 +613,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AB7470B652FA8C8FFE3BBBEC /* Pods-RNWithSmoothie-RNWithSmoothieTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RNWithSmoothieTests/Info.plist;
@@ -644,6 +651,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RNWithSmoothie;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNWithSmoothie-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -666,6 +674,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RNWithSmoothie;
+				SWIFT_OBJC_BRIDGING_HEADER = "RNWithSmoothie-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

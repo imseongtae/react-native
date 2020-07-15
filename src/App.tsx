@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components/native';
 import {ThemeProvider} from 'styled-components';
 import Theme from './Theme';
+
+import {Platform} from 'react-native';
+import Geolocation from 'react-native-geolocation-service';
+
+import CurrentPosition from './Components/CurrentPosition';
 
 interface StyledProps {
   theme: ITheme;
@@ -26,13 +31,27 @@ const MainText = styled.Text`
 
 interface Props {}
 const App = ({}: Props) => {
+  useEffect(() => {
+    if (Platform.OS === 'ios') {
+      Geolocation.requestAuthorization('always');
+    }
+  }, []);
   return (
     <ThemeProvider theme={Theme}>
       <Container>
-        <MainText>Hello world</MainText>
+        <MainText>Hello world~</MainText>
+        <CurrentPosition />
       </Container>
     </ThemeProvider>
   );
 };
 
 export default App;
+
+// watchman watch-del-all;
+// rm -rf $TMPDIR/react-native-packager-cache-;
+// rm -rf $TMPDIR/metro-bundler-cache-;
+// rm -rf node_modules/;
+// npm cache clean --force;
+// npm install;
+// npm start
